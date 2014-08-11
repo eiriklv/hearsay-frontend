@@ -31,7 +31,7 @@
     "react-bootstrap": "^0.11.1",
     "fibers": "~1.0.1",
     "marked": "~0.3.2",
-    "hearsay-common": "git+ssh://git@bitbucket.org:eiriklv/hearsay-common.git"
+    "hearsay-common": "git+ssh://git@github.com:eiriklv/hearsay-common.git"
   },
   "devDependencies": {
     "browserify": "~4.1.6",
