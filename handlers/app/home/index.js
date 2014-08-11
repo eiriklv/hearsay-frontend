@@ -11,7 +11,7 @@ exports = module.exports = function (services, helpers) {
 
         helpers.react.renderMarkupToString({
             component: App,
-            clientScripts: ['/javascript/reactapp.js'],
+            clientScripts: ['/javascript/app.js'],
             context: context,
             staticPage: false,
             callback: function (err, markup) {

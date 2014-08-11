@@ -28,18 +28,8 @@ function createBundles (bundles) {
 gulp.task('browserify', function () {
     createBundles([
         {
-            input: ['./client/javascript/reactapp.js'],
-            output: 'reactapp.js',
-            destination: './client/public/javascript/'
-        },
-        {
-            input: ['./client/javascript/landing.js'],
-            output: 'landing.js',
-            destination: './client/public/javascript/'
-        },
-        {
-            input: ['./client/javascript/404.js'],
-            output: '404.js',
+            input: ['./client/javascript/app.js'],
+            output: 'app.js',
             destination: './client/public/javascript/'
         }
     ]);
