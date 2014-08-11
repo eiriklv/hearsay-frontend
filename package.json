@@ -1,0 +1,59 @@
+{
+  "name": "hearsay-frontend",
+  "main": "app.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "version": "0.1.0",
+  "description": "Hearsay Frontend",
+  "dependencies": {
+    "express": "~4.4.3",
+    "morgan": "~1.1.1",
+    "body-parser": "~1.2.2",
+    "cookie-parser": "~1.1.0",
+    "connect-redis": "~2.0.0",
+    "express-session": "~1.2.1",
+    "serve-favicon": "~2.0.0",
+    "errorhandler": "~1.0.1",
+    "method-override": "~1.0.2",
+    "colors": "~0.6.2",
+    "async": "~0.9.0",
+    "debug": "~0.8.1",
+    "convict": "~0.4.2",
+    "validator": "~3.12.0",
+    "superagent": "^0.18.0",
+    "mongoose": "~3.8.12",
+    "stylus": "~0.46.3",
+    "react": "~0.10.0",
+    "react-async": "~0.9.1",
+    "react-router-component": "~0.18.2",
+    "node-jsx": "0.11.0",
+    "react-bootstrap": "^0.11.1",
+    "fibers": "~1.0.1",
+    "marked": "~0.3.2",
+    "hearsay-common": "git+ssh://git@bitbucket.org:eiriklv/hearsay-common.git"
+  },
+  "devDependencies": {
+    "browserify": "~4.1.6",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp": "~3.6.2",
+    "gulp-stylus": "~1.0.2",
+    "gulp-notify": "~1.3.1",
+    "gulp-nodemon": "~1.0.3",
+    "nib": "~1.0.2",
+    "envify": "~1.2.1",
+    "reactify": "0.14.x",
+    "jest-cli": "^0.1.18"
+  },
+  "browserify": {
+    "transform": [
+      "envify",
+      "reactify"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "develop": "sh dev.sh"
+  },
+  "author": "Eirik Vullum <eirik@evconsult.no>"
+}
