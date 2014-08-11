@@ -61,7 +61,7 @@ module.exports = React.createClass({
         })();
 
         return (
-            <InfiniteScroll loader={loader} loadMore={this.loadMore} hasMore={this.state.hasMore} threshold={500}>
+            <InfiniteScroll loader={loader} loadMore={this.loadMore} hasMore={this.state.hasMore} threshold={1000}>
                 <div className='container'>
                     {articleNodes}
                 </div>
