@@ -12,8 +12,6 @@ var InfiniteScroll = require('react-infinite-scroll')(React);
 // sub-components
 var Article = require('./article');
 
-var uniqueCounter = 0;
-
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
@@ -23,7 +21,6 @@ module.exports = React.createClass({
         this.props.api.entries.get({ page: skip, perPage: perPage }, callback);
     },
 
-    // the initial state of the component (this.type refers to a static method)
     getInitialStateAsync: function (callback) {
         this.getArticles(0, this.props.perPage, function (err, articles) {
             if (err) return callback(err);
@@ -51,7 +48,7 @@ module.exports = React.createClass({
     render: function () {
         var articleNodes = this.state.articles.map(function (article) {
             return (
-                <Article key={uniqueCounter++} article={article} />
+                <Article key={article.guid} article={article} />
             );
         });
 
@@ -64,7 +61,7 @@ module.exports = React.createClass({
         })();
 
         return (
-            <InfiniteScroll loader={loader} loadMore={this.loadMore} hasMore={this.state.hasMore}>
+            <InfiniteScroll loader={loader} loadMore={this.loadMore} hasMore={this.state.hasMore} threshold={500}>
                 <div className='container'>
                     {articleNodes}
                 </div>

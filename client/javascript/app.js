@@ -33,7 +33,7 @@ var App = React.createClass({
             <html>
                 <Head title={this.state.title} description={this.state.description} />
                 <body id='reactapp'>
-                    <Header />
+                    <Header title={this.state.title} />
                     <ArticleBox api={api} perPage={5} />
                 </body>
             </html>

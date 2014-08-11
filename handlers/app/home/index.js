@@ -4,8 +4,8 @@ var App = require('../../../client/javascript/app');
 exports = module.exports = function (services, helpers) {
     return function (req, res, next) {
         var context = {
-            title: 'Hearsay Live News',
-            description: 'Demo application',
+            title: 'Hearsay - The Latest News',
+            description: 'News service',
             startTime: new Date()
         }
 
