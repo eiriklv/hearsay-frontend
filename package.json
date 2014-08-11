@@ -27,6 +27,7 @@
     "react": "~0.10.0",
     "react-async": "~0.9.1",
     "react-router-component": "~0.18.2",
+    "react-infinite-scroll": "*",
     "node-jsx": "0.11.0",
     "react-bootstrap": "^0.11.1",
     "fibers": "~1.0.1",

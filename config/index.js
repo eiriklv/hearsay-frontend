@@ -54,6 +54,11 @@ var config = module.exports = convict({
                 default: '/api',
                 env: 'CLIENT_API_PATH'
             }
+        },
+        domain: {
+            doc: 'The client domain (absolute)',
+            default: 'localhost',
+            env: 'CLIENT_DOMAIN'
         }
     },
     database: {

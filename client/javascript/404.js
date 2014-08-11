@@ -5,43 +5,43 @@
 
 // config
 var config = require('./config');
-var api = require('./modules/api')(config);
 
 // dependencies
 var React = require('react');
 var ReactAsync = require('react-async');
-var superagent = require('superagent');
 
 // custom components
-var ArticleBox = require('./modules/components/article-box');
 var Head = require('./modules/components/head');
-var Header = require('./modules/components/header');
 
 // Main page component (this is asyncronous)
-var App = React.createClass({
-    // mixins
+var NotFound = React.createClass({
     mixins: [ReactAsync.Mixin],
 
-    // the initial state of the component (this.type refers to a static method)
     getInitialStateAsync: function (callback) {
         callback(null, this.props); // set the input props as state (equal to 'return this.props' in getInitialState, but async)
     },
 
-    // main rendering function (uses the state of the component, not the props)
     render: function() {
         return (
             <html>
-                <Head title={this.state.title} description={this.state.description} />
-                <body id='reactapp'>
-                    <Header />
-                    <ArticleBox api={api} perPage={5} />
+                <Head title={this.state.title} description={this.state.description}></Head>
+                <body id="notfound">
+                    <div className="container">
+                        <div className="jumbotron text-center">
+                            <h1><span className="fa fa-cloud"></span> {this.state.title}</h1>
+
+                            <p>You requested: {this.state.url}</p>
+
+                            <a href="/reactapp" className="btn btn-success"><span className="fa fa-user"></span> Go back home</a>
+                        </div>
+                    </div>
                 </body>
             </html>
         );
     }
 });
 
-module.exports = App;
+module.exports = NotFound;
 
 // If the file is processed by the browser, it should mount itself to the document and 'overtake' the markup from the server without rerendering
 if (typeof window !== 'undefined') {
@@ -51,6 +51,6 @@ if (typeof window !== 'undefined') {
     }
 
     window.onload = function () {
-        React.renderComponent(App(), document);
+        React.renderComponent(NotFound(), document);
     }
 }
