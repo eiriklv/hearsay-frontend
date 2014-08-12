@@ -16,6 +16,7 @@ var superagent = require('superagent');
 var ArticleBox = require('./modules/components/article-box');
 var Head = require('./modules/components/head');
 var Header = require('./modules/components/header');
+var ExternalScripts = require('./modules/components/external-scripts');
 
 // Main page component (this is asyncronous)
 var App = React.createClass({
@@ -35,6 +36,8 @@ var App = React.createClass({
                 <body id='reactapp'>
                     <Header title={this.state.title} />
                     <ArticleBox api={api} perPage={5} />
+
+                    <ExternalScripts />
                 </body>
             </html>
         );
