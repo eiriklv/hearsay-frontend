@@ -10,9 +10,14 @@ module.exports = React.createClass({
     displayName: 'Article',
 
     render: function () {
+        var image;
+        if (this.props.article.image) {
+            image = <img className='article-image' src={this.props.article.image} />
+        }
+
         return (
-            <a href={this.props.article.url} className='thumbnail'>
-                <img className='article-image' src={this.props.article.image ? this.props.article.image : 'http://placehold.it/350x150/ffffff/000000&text=Hearsay%20Live%20News' } alt={this.props.article.title} />
+            <a href={this.props.article.url} className='thumbnail article'>
+                {image}
                 <div className='caption'>
                     <h3 className='article-header'>{this.props.article.title}</h3>
 
