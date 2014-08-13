@@ -6,6 +6,9 @@ var React = require('react');
 var ReactAsync = require('react-async');
 var superagent = require('superagent');
 
+// helpers
+var helpers = require('../../../../helpers/common')();
+
 // addons
 var InfiniteScroll = require('react-infinite-scroll')(React);
 
@@ -17,53 +20,56 @@ module.exports = React.createClass({
 
     mixins: [ReactAsync.Mixin],
 
-    getArticles: function (skip, perPage, callback) {
-        this.props.api.entries.get({ page: skip, perPage: perPage }, callback);
+    fetchNextArticles: function (skip, perPage, callback) {
+        this.props.api.entries.get({ page: skip - 1, perPage: perPage }, callback);
     },
 
     getInitialStateAsync: function (callback) {
-        this.getArticles(0, this.props.perPage, function (err, articles) {
-            if (err) return callback(err);
+        callback(null, {
+            page: 0,
+            articles: [],
+            hasMore: true
+        });
+    },
 
-            callback(null, {
-                skip: 1,
-                articles: articles,
-                hasMore: articles.length == this.props.perPage
-            });
+    includeLoadedArticles: function (page, articles) {
+        this.setState({
+            page: page,
+            articles: helpers.createUniqueArray(this.state.articles.concat(articles)),
+            hasMore: articles.length == this.props.perPage
+        });
+    },
+
+    loadMoreArticles: function (page) {
+        this.fetchNextArticles(page, this.props.perPage, function (err, articles) {
+            if (err) return callback(err);
+            this.includeLoadedArticles(page, articles);
         }.bind(this));
     },
 
-    loadMore: function (page) {
-        this.getArticles(this.state.skip, this.props.perPage, function (err, articles) {
-            if (err) return callback(err);
-
-            this.setState({
-                skip: this.state.skip + 1,
-                articles: this.state.articles.concat(articles),
-                hasMore: articles.length == this.props.perPage
-            });
-        }.bind(this));
+    getLoaderElement: function () {
+        return (
+            <div className='container'>
+                <div className='well text-center'>Loading <i className='fa fa-cog fa-spin'></i></div>
+            </div>
+        );
     },
 
-    render: function () {
+    getArticlesToRender: function () {
         var articleNodes = this.state.articles.map(function (article) {
             return (
                 <Article key={article.guid} article={article} />
             );
         });
 
-        var loader = (function () {
-            return (
-                <div className='container'>
-                    <div className='well'>Loading ...</div>
-                </div>
-            );
-        })();
+        return articleNodes;
+    },
 
+    render: function () {
         return (
-            <InfiniteScroll loader={loader} loadMore={this.loadMore} hasMore={this.state.hasMore} threshold={1000}>
+            <InfiniteScroll loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
                 <div className='container'>
-                    {articleNodes}
+                    {this.getArticlesToRender()}
                 </div>
             </InfiniteScroll >
         );
