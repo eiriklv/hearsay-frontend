@@ -15,6 +15,8 @@ var Head = require('./modules/components/head');
 
 // Main page component (this is asyncronous)
 var NotFound = React.createClass({
+    displayName: 'NotFoundApp',
+
     mixins: [ReactAsync.Mixin],
 
     getInitialStateAsync: function (callback) {
@@ -29,9 +31,7 @@ var NotFound = React.createClass({
                     <div className="container">
                         <div className="jumbotron text-center">
                             <h1><span className="fa fa-cloud"></span> {this.state.title}</h1>
-
                             <p>You requested: {this.state.url}</p>
-
                             <a href="/reactapp" className="btn btn-success"><span className="fa fa-user"></span> Go back home</a>
                         </div>
                     </div>

@@ -20,10 +20,10 @@ var ExternalScripts = require('./modules/components/external-scripts');
 
 // Main page component (this is asyncronous)
 var App = React.createClass({
-    // mixins
+    displayName: 'MainApp',
+
     mixins: [ReactAsync.Mixin],
 
-    // the initial state of the component (this.type refers to a static method)
     getInitialStateAsync: function (callback) {
         callback(null, this.props); // set the input props as state (equal to 'return this.props' in getInitialState, but async)
     },

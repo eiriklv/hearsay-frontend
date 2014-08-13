@@ -56,13 +56,11 @@ module.exports = React.createClass({
     },
 
     getArticlesToRender: function () {
-        var articleNodes = this.state.articles.map(function (article) {
+        return this.state.articles.map(function (article) {
             return (
                 <Article key={article.guid} article={article} />
             );
         });
-
-        return articleNodes;
     },
 
     render: function () {
