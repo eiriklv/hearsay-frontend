@@ -42,7 +42,7 @@ module.exports = React.createClass({
 
     loadMoreArticles: function (page) {
         this.fetchNextArticles(page, this.props.perPage, function (err, articles) {
-            if (err) return callback(err);
+            if (err) return console.log(err);
             this.includeLoadedArticles(page, articles);
         }.bind(this));
     },

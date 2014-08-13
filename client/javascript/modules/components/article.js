@@ -4,17 +4,25 @@
 
 var React = require('react');
 
-var SetIntervalMixin = require('../mixins/set-interval');
+var ImageComponent = require('./image');
 
 module.exports = React.createClass({
     displayName: 'Article',
 
     getImageElement: function () {
-        var image;
-        if (this.props.article.image) {
-            image = <img className='article-image' src={this.props.article.image} />
+        var src;
+
+        // use meta:og image if available
+        if (this.props.article.content && this.props.article.content.image) {
+            src = this.props.article.content.image;
         }
-        return image;
+
+        // use default image if meta:og is missing
+        if (!src && this.props.article.image) {
+            src = this.props.article.image;
+        }
+
+        return src ? <ImageComponent src={src} /> : null;
     },
 
     render: function () {
