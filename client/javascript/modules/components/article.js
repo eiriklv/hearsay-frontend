@@ -38,7 +38,7 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <a href={this.props.article.url} className='thumbnail article'>
+            <a href={'/article/' + encodeURIComponent(this.props.article.url)} className='thumbnail article'>
                 {this.getImageElement()}
                 <div className='caption'>
                     {this.getTitle()}
