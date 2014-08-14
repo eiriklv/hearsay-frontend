@@ -20,8 +20,18 @@ module.exports = React.createClass({
 
     mixins: [ReactAsync.Mixin],
 
-    fetchNextArticles: function (skip, perPage, callback) {
-        this.props.api.entries.get({ page: skip - 1, perPage: perPage }, callback);
+    componentWillReceiveProps: function (nextProps) {
+        if (nextProps.category !== this.props.category) {
+            this.setState({
+                page: 0,
+                articles: [],
+                hasMore: true
+            });
+        }
+    },
+
+    fetchNextArticles: function (page, perPage, callback) {
+        this.props.api.entries.get({ page: page, perPage: perPage }, callback);
     },
 
     getInitialStateAsync: function (callback) {
@@ -34,7 +44,7 @@ module.exports = React.createClass({
 
     includeLoadedArticles: function (page, articles) {
         this.setState({
-            page: page,
+            page: page + 1,
             articles: helpers.createUniqueArray(this.state.articles.concat(articles)),
             hasMore: articles.length == this.props.perPage
         });
@@ -65,11 +75,11 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <InfiniteScroll loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
+            <InfiniteScroll pageStart={this.state.page - 1} loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
                 <div className='container'>
                     {this.getArticlesToRender()}
                 </div>
-            </InfiniteScroll >
+            </InfiniteScroll>
         );
     }
 });

@@ -14,6 +14,7 @@ var superagent = require('superagent');
 
 // custom components
 var ArticleBox = require('./modules/components/article-box');
+var CategorySelecter = require('./modules/components/category-selecter');
 var Head = require('./modules/components/head');
 var Header = require('./modules/components/header');
 var ExternalScripts = require('./modules/components/external-scripts');
@@ -28,6 +29,10 @@ var App = React.createClass({
         callback(null, this.props); // set the input props as state (equal to 'return this.props' in getInitialState, but async)
     },
 
+    changeCategory: function (category) {
+        this.setState({ category: category });
+    },
+
     // main rendering function (uses the state of the component, not the props)
     render: function() {
         return (
@@ -35,8 +40,8 @@ var App = React.createClass({
                 <Head title={this.state.title} description={this.state.description} />
                 <body id='reactapp'>
                     <Header title={this.state.title} />
-                    <ArticleBox api={api} perPage={5} />
-
+                    <CategorySelecter categories={this.state.categories} changeCategory={this.changeCategory} />
+                    <ArticleBox api={api} perPage={5} category={this.state.category} />
                     <ExternalScripts />
                 </body>
             </html>

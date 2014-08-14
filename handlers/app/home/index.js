@@ -6,8 +6,15 @@ exports = module.exports = function (services, helpers) {
         var context = {
             title: 'Hearsay - The Latest News',
             description: 'News service',
-            startTime: new Date()
-        }
+            startTime: new Date(),
+            categories: [
+                { display: 'All News', value: '' },
+                { display: 'Technology', value: 'technology' },
+                { display: 'Gaming', value: 'gaming' },
+                { display: 'Hackernews', value: 'hackernews' },
+                { display: 'Health/Food', value: 'health' }
+            ]
+        };
 
         helpers.react.renderMarkupToString({
             component: App,
