@@ -1,5 +1,5 @@
-Hearsay Live News App
-=====================
+Hearsay Live News App (Frontend)
+================================
 
 #### Introduction:
 Introduction
@@ -76,7 +76,7 @@ export NODE_ENV="production" \
 export APPSECRET="somecrazyhash" \
 export CLIENT_API_PATH="/api" \
 export SESSION_KEY="express.sid" \
-export MONGO_URL="mongodb://localhost/express-basic-app" \
+export MONGO_URL="mongodb://localhost/hearsay" \
 export REDIS_URL="redis://localhost:6379" \
 
 gulp

@@ -6,7 +6,7 @@ function _throw (m) {
 // dependencies
 var util = require('util');
 var convict = require('convict');
-var debug = require('debug')('express-basic-app:configuration');
+var debug = require('debug')('hearsay:frontend:configuration');
 var validator = require('validator');
 
 // catch all errors with no handler
