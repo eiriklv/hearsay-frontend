@@ -36,10 +36,10 @@ module.exports.configureExpress = function (options, app, config) {
 };
 
 // create session store
-module.exports.sessions = function (SessionStore, config) {
+module.exports.sessions = function (SessionStore, express, config) {
     var authObject;
 
-    if (config.get('database.redis.url')) {
+    if (config.get('env') == 'production') {
         var parsedUrl = url.parse(config.get('database.redis.url'));
         authObject = {
             prefix: config.get('database.redis.prefix'),
@@ -49,9 +49,11 @@ module.exports.sessions = function (SessionStore, config) {
             pass: parsedUrl.auth ? parsedUrl.auth.split(":")[1] : null,
             secret: config.get('server.secret')
         };
-    }
 
-    return new SessionStore(authObject);
+        return new SessionStore(authObject);
+    } else {
+        return express.MemoryStore;
+    }
 };
 
 // handle express errors
