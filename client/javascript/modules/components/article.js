@@ -25,14 +25,24 @@ module.exports = React.createClass({
         return src ? <ImageComponent src={src} /> : null;
     },
 
+    getTitle: function ()  {
+        return (
+            <h3 className='article-header'>{this.props.article.title}</h3>
+        );
+    },
+
+    getDescription: function () {
+        var description = this.props.article.description;
+        return description ? <p className='article-description'>{description}</p> : null;
+    },
+
     render: function () {
         return (
             <a href={this.props.article.url} className='thumbnail article'>
                 {this.getImageElement()}
                 <div className='caption'>
-                    <h3 className='article-header'>{this.props.article.title}</h3>
-
-                    {this.props.article.ingress ? <p>this.props.article.ingress</p> : ''}
+                    {this.getTitle()}
+                    {this.getDescription()}
                 </div>
             </a>
         );
