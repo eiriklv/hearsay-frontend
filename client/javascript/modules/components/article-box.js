@@ -31,7 +31,11 @@ module.exports = React.createClass({
     },
 
     fetchNextArticles: function (page, perPage, callback) {
-        this.props.api.entries.get({ page: page, perPage: perPage }, callback);
+        this.props.api.entries.get({
+            page: page,
+            perPage: perPage,
+            category: this.props.category
+        }, callback);
     },
 
     getInitialStateAsync: function (callback) {
