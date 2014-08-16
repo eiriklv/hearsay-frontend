@@ -3,7 +3,7 @@ exports = module.exports = function (Entry, helpers) {
         console.log(body);
 
         if (body.url) {
-            Entry.findOne({ guid: body.url }, null, {}, function (err, entry) {
+            Entry.findOne({ url: body.url }, null, {}, function (err, entry) {
                 if (err) return callback(err);
                 entry = entry || {};
                 callback(err, entry);
