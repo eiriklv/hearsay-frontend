@@ -8,7 +8,7 @@ var menuTree = [
         value: 'technology',
         children: [
             {
-                display: 'HackerNews',
+                display: 'Hacker News',
                 value: 'hackernews'
             },
             {
@@ -16,40 +16,34 @@ var menuTree = [
                 value: 'gaming'
             },
             {
-                display: 'Coding',
-                value: 'coding',
-                children: [
-                    {
-                        display: 'Javascript',
-                        value: 'javascript'
-                    },
-                    {
-                        display: 'CSS',
-                        value: 'css',
-                    }
-                ]
+                display: 'Wired.com',
+                value: 'wired'
             },
             {
-                display: 'Science',
-                value: 'science'
+                display: 'Mashable',
+                value: 'mashable'
+            },
+            {
+                display: 'TechCrunch',
+                value: 'techcrunch'
+            },
+            {
+                display: 'TheAtlantic',
+                value: 'theatlantic'
             }
         ]
     },
     {
-        display: 'News',
-        value: 'news',
+        display: 'Career',
+        value: 'career',
         children: [
             {
-                display: 'Sports',
-                value: 'sports'
+                display: 'The Muse',
+                value: 'themuse'
             },
             {
-                display: 'Economy',
-                value: 'economy'
-            },
-            {
-                display: 'World',
-                value: 'world'
+                display: 'Inc.com',
+                value: 'inc'
             }
         ]
     }
