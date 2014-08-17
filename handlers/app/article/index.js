@@ -15,7 +15,7 @@ exports = module.exports = function (services, helpers) {
             function (article, callback) {
                 var context = {
                     article: article,
-                    title: 'Hearsay - The Latest News',
+                    title: 'Hearsay - The Latest Tech News',
                     description: 'News service'
                 };
 
