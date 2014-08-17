@@ -4,13 +4,25 @@
 
 var React = require('react');
 
+var ImageComponent = require('./image');
+
 module.exports = React.createClass({
     displayName: 'ArticleViewer',
 
-    getImage: function () {
-        return this.props.article.content.image ?
-            <div className='header-image'><img className='thumbnail header-image' src={this.props.article.content.image} /></div> :
-            null;
+    getImageElement: function () {
+        var src;
+
+        // use meta:og image if available
+        if (this.props.article.content && this.props.article.content.image) {
+            src = this.props.article.content.image;
+        }
+
+        // use default image if meta:og is missing
+        if (!src && this.props.article.image) {
+            src = this.props.article.image;
+        }
+
+        return src ? <ImageComponent forceUpdate={true} src={src} classes={'thumbnail header-image'} /> : null;
     },
 
     getContentBody: function () {
@@ -23,7 +35,9 @@ module.exports = React.createClass({
 
         return (
             <div id='main' className='container'>
-                {this.getImage()}
+                <div className='header-image'>
+                    {this.getImageElement()}
+                </div>
 
                 <div className='well text-center header-title'>
                     <h1>{this.props.article.title}</h1>

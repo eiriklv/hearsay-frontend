@@ -22,7 +22,7 @@ module.exports = React.createClass({
             src = this.props.article.image;
         }
 
-        return src ? <ImageComponent src={src} /> : null;
+        return src ? <ImageComponent src={src} classes={'article-image'} /> : null;
     },
 
     getTitle: function ()  {

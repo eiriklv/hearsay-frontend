@@ -12,9 +12,17 @@ module.exports = React.createClass({
         this.getDOMNode().remove();
     },
 
+    componentDidMount: function () {
+        if (this.props.forceUpdate) {
+            // reload src to force onerror to be called if image link was not valid
+            this.getDOMNode().src = this.props.src;
+            this.forceUpdate();
+        }
+    },
+
     render: function () {
         return (
-            <img onError={this.onError} className='article-image' src={this.props.src} />
+            <img onError={this.onError} className={this.props.classes} src={this.props.src} />
         );
     }
 });
