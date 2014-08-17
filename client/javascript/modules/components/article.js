@@ -36,6 +36,13 @@ module.exports = React.createClass({
         return description ? <p className='article-description'>{description}</p> : null;
     },
 
+    getSource: function () {
+        var toBeRemoved = 'www.';
+        var source = this.props.article.host;
+        if (source && source.indexOf(toBeRemoved) != -1) source = source.substr(0, source.indexOf(toBeRemoved)) + source.substr(source.indexOf(toBeRemoved)+toBeRemoved.length);
+        return source ? <p className='source'>{source}</p> : null;
+    },
+
     getArticleLink: function () {
         return this.props.article.content ? '/article/' + encodeURIComponent(this.props.article.url) : this.props.article.url;
     },
@@ -47,6 +54,7 @@ module.exports = React.createClass({
                 <div className='caption'>
                     {this.getTitle()}
                     {this.getDescription()}
+                    {this.getSource()}
                 </div>
             </a>
         );
