@@ -8,12 +8,12 @@ var categoryTree = [
         value: 'technology',
         children: [
             {
-                display: 'Hacker News',
-                value: 'hackernews'
+                display: 'TechCrunch',
+                value: 'techcrunch'
             },
             {
-                display: 'Gaming',
-                value: 'gaming'
+                display: 'Hacker News',
+                value: 'hackernews'
             },
             {
                 display: 'Wired.com',
@@ -24,16 +24,12 @@ var categoryTree = [
                 value: 'mashable'
             },
             {
-                display: 'TechCrunch',
-                value: 'techcrunch'
-            },
-            {
-                display: 'TheAtlantic',
+                display: 'The Atlantic',
                 value: 'theatlantic'
             },
             {
-                display: 'TheWireCutter',
-                value: 'thewirecutter'
+                display: 'Ars Technica',
+                value: 'arstechnica'
             }
         ]
     },
@@ -48,6 +44,24 @@ var categoryTree = [
             {
                 display: 'Inc.com',
                 value: 'inc'
+            },
+            {
+                display: 'Entrepreneur.com',
+                value: 'entrepreneur'
+            }
+        ]
+    },
+    {
+        display: 'Blogs',
+        value: 'blogs',
+        children: [
+            {
+                display: 'Coding Horror (Jeff Atwood)',
+                value: 'codinghorror'
+            },
+            {
+                display: 'Chris Dixon',
+                value: 'chrisdixon'
             }
         ]
     }
