@@ -2,7 +2,7 @@ Hearsay Live News App (Frontend)
 ================================
 
 #### Introduction:
-Introduction
+A clean reading experience for your news
 
 ![express basic application](http://s29.postimg.org/osrdfy24n/preview.png "Express Basic Application")
 
