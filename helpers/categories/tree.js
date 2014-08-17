@@ -1,4 +1,4 @@
-var menuTree = [
+var categoryTree = [
     {
         display: 'All Sources',
         value: ''
@@ -30,6 +30,10 @@ var menuTree = [
             {
                 display: 'TheAtlantic',
                 value: 'theatlantic'
+            },
+            {
+                display: 'TheWireCutter',
+                value: 'thewirecutter'
             }
         ]
     },
@@ -65,9 +69,9 @@ function createIndents (inputArray, outputArray, level) {
     });
 }
 
-var resultingArray = [];
+var categories = [];
 
 // create flat structure with indents
-createIndents(menuTree, resultingArray, 0);
+createIndents(categoryTree, categories, 0);
 
-module.exports = resultingArray;
+module.exports = categories;
