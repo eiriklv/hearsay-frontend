@@ -32,7 +32,17 @@
     "react-bootstrap": "^0.11.1",
     "fibers": "~1.0.1",
     "marked": "~0.3.2",
-    "hearsay-common": "git+ssh://git@github.com:eiriklv/hearsay-common.git"
+    "hearsay-common": "git+ssh://git@github.com:eiriklv/hearsay-common.git",
+    "browserify": "~4.1.6",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp": "~3.6.2",
+    "gulp-stylus": "~1.0.2",
+    "gulp-notify": "~1.3.1",
+    "gulp-nodemon": "~1.0.3",
+    "nib": "~1.0.2",
+    "envify": "~1.2.1",
+    "reactify": "0.14.x",
+    "jest-cli": "^0.1.18"
   },
   "devDependencies": {
     "browserify": "~4.1.6",
