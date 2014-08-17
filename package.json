@@ -64,7 +64,9 @@
   },
   "scripts": {
     "test": "jest",
-    "develop": "sh dev.sh"
+    "develop": "sh dev.sh",
+    "postinstall": "npm run build",
+    "build": "gulp build"
   },
   "author": "Eirik Vullum <eirik@evconsult.no>"
 }
