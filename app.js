@@ -1,5 +1,3 @@
-console.log('derp');
-
 // dependencies
 var http = require('http');
 var express = require('express');
