@@ -1,12 +1,17 @@
 exports = module.exports = function () {
-    return function (inputArray) {
+    return function (inputArray, sorter) {
         var arrResult = {};
         var nonDuplicatedArray = [];
         var i, n;
 
         for (i = 0, n = inputArray.length; i < n; i++) {
             var item = inputArray[i];
-            arrResult[item.guid] = item;
+
+            if (sorter) {
+                arrResult[item[sorter]] = item;
+            } else {
+                arrResult[item] = item;
+            }
         }
 
         i = 0;

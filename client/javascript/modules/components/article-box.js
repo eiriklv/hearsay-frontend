@@ -49,7 +49,7 @@ module.exports = React.createClass({
     includeLoadedArticles: function (page, articles) {
         this.setState({
             page: page + 1,
-            articles: helpers.createUniqueArray(this.state.articles.concat(articles)),
+            articles: helpers.createUniqueArray(this.state.articles.concat(articles), 'guid'),
             hasMore: articles.length == this.props.perPage
         });
     },
