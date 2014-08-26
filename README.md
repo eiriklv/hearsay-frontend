@@ -23,7 +23,6 @@ Landing                                                                       | 
 * [sass](http://sass-lang.com/)
 * [bootstrap](http://getbootstrap.com/)
 * [fontawesome](http://fortawesome.github.io/Font-Awesome/)
-* [jquery](http://www.jquery.com/)
 
 #### Testing:
 * [jest](http://facebook.github.io/jest/)
