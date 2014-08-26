@@ -4,7 +4,13 @@ Hearsay Live News App (Frontend)
 #### Introduction:
 A clean reading experience for your news
 
-![express basic application](http://s29.postimg.org/osrdfy24n/preview.png "Express Basic Application")
+![hearsay](http://www.hearsay.me/logo.png)
+
+Landing                                                                       |  Article View
+:----------------------------------------------------------------------------:|:-------------------------------------------------:
+![](http://s12.postimg.org/w78nzhwq5/Skjermbilde_2014_08_27_kl_01_16_08.png)  |  ![](http://s12.postimg.org/ffncgqwh9/Skjermbilde_2014_08_27_kl_01_16_39.png)
+:----------------------------------------------------------------------------:|:-------------------------------------------------:
+![](http://s12.postimg.org/bltw7lf59/Skjermbilde_2014_08_27_kl_01_16_25.png)  |  ![](http://s12.postimg.org/ucvthr9pp/Skjermbilde_2014_08_27_kl_01_16_46.png)
 
 #### Built with:
 * [node.js](http://www.nodejs.org/)
