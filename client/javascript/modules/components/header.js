@@ -23,8 +23,8 @@ module.exports = React.createClass({
 
                     <div className='navbar-header'>
                         <a className='navbar-brand' href='/'>
-                            <img src='/logo.png' height='40'/>
-                            {this.props.title ? this.props.title : 'Hearsay'}
+                            <img className="navbar-logo" src='/logo.png' height='40'/>
+                            <span className="navbar-logo-text">{this.props.title ? this.props.title : 'Hearsay'}</span>
                         </a>
                     </div>
 
