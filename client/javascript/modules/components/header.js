@@ -22,7 +22,10 @@ module.exports = React.createClass({
                 <div className='container'>
 
                     <div className='navbar-header'>
-                        <a className='navbar-brand' href='/'>{this.props.title ? this.props.title : 'Hearsay'}</a>
+                        <a className='navbar-brand' href='/'>
+                            <img src='/logo.png' height='40'/>
+                            {this.props.title ? this.props.title : 'Hearsay'}
+                        </a>
                     </div>
 
                 </div>
