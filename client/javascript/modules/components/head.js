@@ -29,7 +29,7 @@ module.exports = React.createClass({
                 <meta property='og:title' content={title} />
                 <meta property='og:description' content={description} />
                 <meta property='og:type' content='website' />
-                <meta property='og:image' content='/images/facebook-thumbnail.png' />
+                <meta property='og:image' content='/favicon-196x196.png' />
 
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
                 <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
