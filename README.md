@@ -5,11 +5,11 @@ Hearsay Live News App (Frontend)
 A clean reading experience for your news. [Live demo](http://hearsay.me/).
 
 ##### Accompanying repos:
-[hearsay-collector](https://github.com/eiriklv/hearsay-collector/)
-[hearsay-common](https://github.com/eiriklv/hearsay-common/)
-[congregator-rssreader](https://github.com/eiriklv/congregator-rssreader/)
-[congregator-sitescraper](https://github.com/eiriklv/congregator-sitescraper/)
-[congregator-jsonfetcher](https://github.com/eiriklv/congregator-jsonfetcher/)
+* [hearsay-collector](https://github.com/eiriklv/hearsay-collector/)
+* [hearsay-common](https://github.com/eiriklv/hearsay-common/)
+* [congregator-rssreader](https://github.com/eiriklv/congregator-rssreader/)
+* [congregator-sitescraper](https://github.com/eiriklv/congregator-sitescraper/)
+* [congregator-jsonfetcher](https://github.com/eiriklv/congregator-jsonfetcher/)
 
 ![hearsay](http://www.hearsay.me/logo.png)
 
