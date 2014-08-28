@@ -70,7 +70,7 @@ Landing                                                                       | 
  * example: `mongodb://user:pass@localhost:27017/mydatabase`
 
 #### Run tests:
-* `npm test` or `mocha -R spec`
+* `npm test`
 
 #### Run the application:
 * set environment variables
