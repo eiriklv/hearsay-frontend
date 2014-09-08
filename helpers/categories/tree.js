@@ -62,6 +62,10 @@ var categoryTree = [
             {
                 display: 'Chris Dixon',
                 value: 'chrisdixon'
+            },
+            {
+                display: 'Smashing Magazine',
+                value: 'smashingmagazine'
             }
         ]
     }
