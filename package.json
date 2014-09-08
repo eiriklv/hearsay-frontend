@@ -2,7 +2,7 @@
   "name": "hearsay-frontend",
   "main": "app.js",
   "engines": {
-    "node": "0.10.x"
+    "node": "0.10.30"
   },
   "version": "0.2.0",
   "description": "Hearsay Frontend",
