@@ -8,7 +8,7 @@ function createSingleBundle (options) {
         entries: options.input,
         extensions: options.extensions
     })
-        .bundle({debug: true})
+        .bundle({debug: false})
         .on('error', handleErrors)
         .pipe(source(options.output))
         .pipe(gulp.dest(options.destination));

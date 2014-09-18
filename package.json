@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "~4.4.3",
     "morgan": "~1.1.1",
+    "compression": "~1.1.0",
     "body-parser": "~1.2.2",
     "cookie-parser": "~1.1.0",
     "connect-redis": "~2.0.0",

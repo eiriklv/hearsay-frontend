@@ -14,7 +14,6 @@ module.exports = React.createClass({
     render: function() {
         return (
             <div>
-                <script src='//cdn.jsdelivr.net/alertify.js/0.3.11/alertify.js'></script>
             </div>
         );
     }

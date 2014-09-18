@@ -6,6 +6,7 @@ var debug = require('debug')('hearsay:frontend:setup');
 
 // express dependencies
 var morgan = require('morgan');
+var compress = require('compression');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 var methodOverride = require('method-override');
@@ -22,6 +23,7 @@ module.exports.configureExpress = function (options, app, config) {
 
     // express common config
     app.use(options.express.static(options.dir + '/client/public'));
+    app.use(compress());
     app.use(morgan('dev'));
     app.use(options.cookieParser());
     app.use(bodyParser());

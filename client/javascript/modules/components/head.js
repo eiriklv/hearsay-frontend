@@ -51,8 +51,6 @@ module.exports = React.createClass({
 
                 <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' />
                 <link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' />
-                <link rel='stylesheet' href='//cdn.jsdelivr.net/alertify.js/0.3.11/themes/alertify.core.css' />
-                <link rel='stylesheet' href='//cdn.jsdelivr.net/alertify.js/0.3.11/themes/alertify.bootstrap.css' />
                 <link rel='stylesheet' href='/stylesheets/theme.css' />
                 <link rel='stylesheet' href='/stylesheets/app.css' />
             </head>
