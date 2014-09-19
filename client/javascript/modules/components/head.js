@@ -53,6 +53,8 @@ module.exports = React.createClass({
                 <link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' />
                 <link rel='stylesheet' href='/stylesheets/theme.css' />
                 <link rel='stylesheet' href='/stylesheets/app.css' />
+
+                <link href={'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'} rel='stylesheet' type='text/css' />
             </head>
         );
     }
