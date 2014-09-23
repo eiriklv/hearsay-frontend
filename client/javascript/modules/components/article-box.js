@@ -64,7 +64,7 @@ module.exports = React.createClass({
     getLoaderElement: function () {
         return (
             <div className='container'>
-                <div className='well text-center'>Loading <i className='fa fa-cog fa-spin'></i></div>
+                <div className='thumbnail article text-center'>Loading <i className='fa fa-cog fa-spin'></i></div>
             </div>
         );
     },
