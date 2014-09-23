@@ -22,12 +22,12 @@ module.exports = React.createClass({
             src = this.props.article.image;
         }
 
-        return src ? <ImageComponent forceUpdate={true} src={src} classes={'thumbnail header-image'} /> : null;
+        return src ? <ImageComponent forceUpdate={true} src={src} classes={'header-image'} /> : null;
     },
 
     getContentBody: function () {
         if (!this.props.article.content.body) return;
-        return <div id='content' className='well' dangerouslySetInnerHTML={{__html: this.props.article.content.body}}></div>
+        return <div id='content' className='' dangerouslySetInnerHTML={{__html: this.props.article.content.body}}></div>
     },
 
     render: function () {
@@ -35,11 +35,11 @@ module.exports = React.createClass({
 
         return (
             <div id='main' className='container'>
-                <div className='header-image'>
+                <div className='row'>
                     {this.getImageElement()}
                 </div>
 
-                <div className='well text-center header-title'>
+                <div className='text-center header-title'>
                     <h1>{this.props.article.title}</h1>
                     <a href={this.props.article.url}>Visit the original</a>
                 </div>
