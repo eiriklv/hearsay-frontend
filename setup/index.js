@@ -22,8 +22,8 @@ module.exports.configureExpress = function (options, app, config) {
     app.set('json spaces', 2);
 
     // express common config
-    app.use(options.express.static(options.dir + '/client/public'));
     app.use(compress());
+    app.use(options.express.static(options.dir + '/client/public'));
     app.use(morgan('dev'));
     app.use(options.cookieParser());
     app.use(bodyParser());

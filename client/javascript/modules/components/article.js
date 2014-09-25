@@ -4,6 +4,8 @@
 
 var React = require('react');
 
+var helpers = require('../../../../helpers/common')();
+
 var ImageComponent = require('./image');
 
 module.exports = React.createClass({
@@ -37,9 +39,7 @@ module.exports = React.createClass({
     },
 
     getSource: function () {
-        var toBeRemoved = 'www.';
-        var source = this.props.article.host;
-        if (source && source.indexOf(toBeRemoved) != -1) source = source.substr(0, source.indexOf(toBeRemoved)) + source.substr(source.indexOf(toBeRemoved)+toBeRemoved.length);
+        var source = helpers.parseSource(this.props.article.url);
         return source ? <p className='source'>{source}</p> : null;
     },
 
