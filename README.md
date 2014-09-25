@@ -56,6 +56,8 @@ Landing                                                                       | 
  * example: `development`
 * `CLIENT_API_PATH` - Path to the client REST api (relative)
  * example: `/api`
+* `CLIENT_DOMAIN` - Server domain
+ * example: `localhost`
 * `APPSECRET` - Application session secret
  * example: `sOmeCrAzYhAsH894372`
 * `SESSION_KEY` - Application session secret (optional)
@@ -86,6 +88,7 @@ export DEBUG="*" \
 export NODE_ENV="production" \
 export APPSECRET="somecrazyhash" \
 export CLIENT_API_PATH="/api" \
+export CLIENT_API_DOMAIN="localhost" \
 export SESSION_KEY="express.sid" \
 export MONGO_URL="mongodb://localhost/hearsay" \
 export REDIS_URL="redis://localhost:6379" \
