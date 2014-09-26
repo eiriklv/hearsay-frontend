@@ -45,7 +45,8 @@
     "nib": "~1.0.2",
     "envify": "~1.2.1",
     "reactify": "0.14.x",
-    "jest-cli": "^0.1.18"
+    "jest-cli": "^0.1.18",
+    "gulp-cssmin": "^0.1.6"
   },
   "devDependencies": {},
   "browserify": {
