@@ -11,6 +11,7 @@ var helpers = require('../../../../helpers/common')();
 
 // addons
 var InfiniteScroll = require('react-infinite-scroll')(React);
+var MasonryMixin = require('../mixins/masonry.js');
 
 // sub-components
 var Article = require('./article');
@@ -18,7 +19,7 @@ var Article = require('./article');
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
-    mixins: [ReactAsync.Mixin],
+    mixins: [ReactAsync.Mixin, MasonryMixin],
 
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.category !== this.props.category) {
@@ -63,7 +64,7 @@ module.exports = React.createClass({
 
     getLoaderElement: function () {
         return (
-            <div className='container'>
+            <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
                 <div className='thumbnail article text-center'>Loading <i className='fa fa-cog fa-spin'></i></div>
             </div>
         );
@@ -79,11 +80,15 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <InfiniteScroll pageStart={this.state.page - 1} loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
-                <div className='container'>
-                    {this.getArticlesToRender()}
+            <div className='container'>
+                <div className='row'>
+                    <div>
+                        <InfiniteScroll ref='masonryContainer' pageStart={this.state.page - 1} loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
+                            {this.getArticlesToRender()}
+                        </InfiniteScroll>
+                    </div>
                 </div>
-            </InfiniteScroll>
+            </div>
         );
     }
 });
