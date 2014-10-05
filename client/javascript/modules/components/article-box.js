@@ -13,13 +13,18 @@ var helpers = require('../../../../helpers/common')();
 var InfiniteScroll = require('react-infinite-scroll')(React);
 var MasonryMixin = require('../mixins/masonry.js');
 
+// options
+var masonryOptions = {
+    transitionDuration: 0
+};
+
 // sub-components
 var Article = require('./article');
 
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
-    mixins: [ReactAsync.Mixin, MasonryMixin],
+    mixins: [ReactAsync.Mixin, MasonryMixin(masonryOptions)],
 
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.category !== this.props.category) {
