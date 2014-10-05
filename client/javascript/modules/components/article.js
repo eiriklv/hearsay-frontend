@@ -49,14 +49,16 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <a href={this.getArticleLink()} className='thumbnail article'>
-                {this.getImageElement()}
-                <div className='caption'>
-                    {this.getTitle()}
-                    {this.getDescription()}
-                    {this.getSource()}
-                </div>
-            </a>
+            <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a href={this.getArticleLink()} className='thumbnail article'>
+                    {this.getImageElement()}
+                    <div className='caption'>
+                        {this.getTitle()}
+                        {this.getDescription()}
+                        {this.getSource()}
+                    </div>
+                </a>
+            </div>
         );
     }
 });
