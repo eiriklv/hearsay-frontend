@@ -35,7 +35,7 @@ module.exports = React.createClass({
 
         return (
             <div>
-                <div className='row'>
+                <div>
                     {this.getImageElement()}
                 </div>
 
