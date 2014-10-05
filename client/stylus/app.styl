@@ -21,13 +21,18 @@ body#notfound
 
 .top15
     margin-top 15px
+
 .top30
     margin-top 30px
 
 .bottom15
     margin-bottom 15px
+
 .bottom30
-    margin-bottom 30px 
+    margin-bottom 30px
+
+.bottom200
+    margin-bottom 200px !important
 
 textarea
     resize vertical
@@ -60,11 +65,26 @@ iframe
     width 100%
     height auto
 
+.limit-container
+    margin auto
+    max-width 700px
+
 #content
     p
-        margin 20px 0 20px 0
+        font-family "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif
+        font-weight 300
+        margin 2.0em 0 2.0em 0
+        line-height 1.6
         word-wrap break-word
-        font-size 18px
+        font-size 17px
+        letter-spacing 0.01rem
+        text-align justify
+    h1
+        font-size 1.7em
+    h2
+        font-size 1.6em
+    h3
+        font-size 1.5em
 
 .media-object
     border 1px solid gainsboro
@@ -78,7 +98,18 @@ pre, code
 
 .header-title
     word-wrap break-word
-    margin 25px 0 25px 0
+
+.header-title h1
+    font-size 52px
+    font-weight 700
+
+@media (max-width: 768px)
+    .header-title h1
+        font-size 46px
+
+@media (max-width: 480px)
+    .header-title h1
+        font-size 36px
 
 p.source
     margin 10px 0 0 0

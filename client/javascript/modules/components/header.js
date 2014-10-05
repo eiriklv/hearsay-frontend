@@ -18,7 +18,7 @@ module.exports = React.createClass({
 
     render: function() {
         return (
-            <nav className='navbar navbar-default' role='navigation'>
+            <nav className='navbar navbar-default navbar-static-top' role='navigation'>
                 <div className='container'>
 
                     <div className='navbar-header'>

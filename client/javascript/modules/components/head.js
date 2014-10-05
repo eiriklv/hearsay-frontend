@@ -49,12 +49,14 @@ module.exports = React.createClass({
                 <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
                 <meta name="mobile-web-app-capable" content="yes" />
 
+                <link href={'//fonts.googleapis.com/css?family=Merriweather:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'} rel='stylesheet' type='text/css' />
+                <link href={'//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'} rel='stylesheet' type='text/css' />
+
                 <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' />
                 <link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' />
                 <link rel='stylesheet' href='/stylesheets/theme.css' />
                 <link rel='stylesheet' href='/stylesheets/app.css' />
-
-                <link href={'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'} rel='stylesheet' type='text/css' />
+                
             </head>
         );
     }

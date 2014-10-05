@@ -27,24 +27,32 @@ module.exports = React.createClass({
 
     getContentBody: function () {
         if (!this.props.article.content.body) return;
-        return <div id='content' className='' dangerouslySetInnerHTML={{__html: this.props.article.content.body}}></div>
+        return <div id='content' className='limit-container bottom200' dangerouslySetInnerHTML={{__html: this.props.article.content.body}}></div>
     },
 
     render: function () {
         if (!this.props.article.content) this.props.article.content = {};
 
         return (
-            <div id='main' className='container'>
+            <div>
                 <div className='row'>
                     {this.getImageElement()}
                 </div>
 
-                <div className='text-center header-title'>
-                    <h1>{this.props.article.title}</h1>
-                    <a href={this.props.article.url}>Visit the original</a>
+                <div id='main' className='container'>
+                    <div className='text-center header-title limit-container'>
+                        <h1>{this.props.article.title}</h1>
+
+                        <div className='text-center limit-container'>
+                            <hr/>
+                            <a href={this.props.article.url}>Visit the original</a>
+                            <hr/>
+                        </div>
+                    </div>
+
+                    {this.getContentBody()}
                 </div>
 
-                {this.getContentBody()}
             </div>
         );
     }
