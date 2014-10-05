@@ -1,5 +1,5 @@
 var apiUrl = process.env.CLOUD ?
-    process.env.CLIENT_API_PATH :
+    'http://' + process.env.CLIENT_DOMAIN + process.env.CLIENT_API_PATH :
     'http://' + process.env.CLIENT_DOMAIN + ':' + process.env.PORT +  process.env.CLIENT_API_PATH;
 
 exports = module.exports = {
