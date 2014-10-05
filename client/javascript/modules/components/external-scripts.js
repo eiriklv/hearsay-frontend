@@ -14,6 +14,7 @@ module.exports = React.createClass({
     render: function() {
         return (
             <div>
+                <script src='//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js' />
             </div>
         );
     }
