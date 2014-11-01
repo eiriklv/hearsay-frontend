@@ -11,7 +11,7 @@ var helpers = require('../../../../helpers/common')();
 
 // addons
 var InfiniteScroll = require('react-infinite-scroll')(React);
-var MasonryMixin = require('../mixins/masonry.js');
+var MasonryMixin = require('react-masonry-mixin');
 
 // options
 var masonryOptions = {
