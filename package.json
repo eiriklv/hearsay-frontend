@@ -4,7 +4,7 @@
   "engines": {
     "node": "0.10.32"
   },
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Hearsay Frontend",
   "dependencies": {
     "async": "0.9.0",
@@ -28,7 +28,7 @@
     "gulp-streamify": "0.0.5",
     "gulp-stylus": "1.3.3",
     "gulp-uglify": "1.0.1",
-    "hearsay-common": "git+https://878c3337f2ae0290ec65e461c1b6f7cc8e26c0c6:x-oauth-basic@github.com/eiriklv/hearsay-common.git",
+    "hearsay-common": "eiriklv/hearsay-common",
     "imagesloaded": "3.1.8",
     "jest-cli": "0.1.18",
     "marked": "0.3.2",
@@ -40,7 +40,7 @@
     "react": "0.11.0",
     "react-async": "1.0.2",
     "react-router-component": "0.22.x",
-    "react-infinite-scroll": "git+https://878c3337f2ae0290ec65e461c1b6f7cc8e26c0c6:x-oauth-basic@github.com/eiriklv/react-infinite-scroll.git",
+    "react-infinite-scroll": "eiriklv/react-infinite-scroll",
     "react-masonry-mixin": "eiriklv/react-masonry-mixin",
     "react-bootstrap": "0.11.1",
     "reactify": "0.14.x",
