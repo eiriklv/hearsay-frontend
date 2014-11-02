@@ -41,7 +41,7 @@
     "react-async": "1.0.2",
     "react-router-component": "0.22.x",
     "react-infinite-scroll": "eiriklv/react-infinite-scroll",
-    "react-masonry-mixin": "0.3.2",
+    "react-masonry-mixin": "0.3.3",
     "react-bootstrap": "0.11.1",
     "reactify": "0.14.x",
     "serve-favicon": "2.0.0",
