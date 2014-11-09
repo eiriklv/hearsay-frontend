@@ -24,7 +24,7 @@ var Article = require('./article');
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
-    mixins: [ReactAsync.Mixin, MasonryMixin(masonryOptions)],
+    mixins: [ReactAsync.Mixin, MasonryMixin('masonryContainer', masonryOptions)],
 
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.category !== this.props.category) {
