@@ -1,3 +1,5 @@
 var gulp = require('gulp');
 
-gulp.task('default', ['build', 'develop']);
+gulp.task('default', ['build'], function(callback) {
+    callback();
+});

@@ -6,12 +6,13 @@ var NopStream = require('../util/no-op-stream');
 
 var production = process.env.NODE_ENV === 'production';
 
-gulp.task('stylus', function () {
+gulp.task('stylus', function (callback) {
     gulp.src('./client/stylus/*.styl')
         .pipe(stylus({
             use: [nib()],
             import: ['nib']
         }))
         .pipe(production ? cssmin() : (new NopStream()))
-        .pipe(gulp.dest('./client/public/stylesheets'));
+        .pipe(gulp.dest('./client/public/stylesheets'))
+        .on('end', callback);
 });
