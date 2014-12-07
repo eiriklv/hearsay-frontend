@@ -12,6 +12,7 @@ var helpers = require('../../../../helpers/common')();
 // addons
 var InfiniteScroll = require('react-infinite-scroll')(React);
 var MasonryMixin = require('react-masonry-mixin');
+var PackeryMixin = require('react-packery-mixin');
 
 // options
 var masonryOptions = {};
@@ -22,7 +23,7 @@ var Article = require('./article');
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
-    mixins: [ReactAsync.Mixin, MasonryMixin('masonryContainer', masonryOptions)],
+    mixins: [ReactAsync.Mixin, PackeryMixin('masonryContainer', masonryOptions)],
 
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.category !== this.props.category) {
@@ -79,6 +80,7 @@ module.exports = React.createClass({
         return this.state.articles.map(function (article) {
             return (
                 <Article
+                    key={article.guid}
                     article={article}
                 />
             );
