@@ -4,7 +4,7 @@
   "engines": {
     "node": "0.10.32"
   },
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Hearsay Frontend",
   "dependencies": {
     "async": "0.9.0",
@@ -44,8 +44,8 @@
     "react-async": "1.0.2",
     "react-bootstrap": "0.11.1",
     "react-infinite-scroll": "eiriklv/react-infinite-scroll",
-    "react-masonry-mixin": "0.5.2",
-    "react-packery-mixin": "0.1.3",
+    "react-masonry-mixin": "0.5.3",
+    "react-packery-mixin": "0.1.4",
     "react-router-component": "0.22.x",
     "reactify": "0.14.x",
     "serve-favicon": "2.0.0",
