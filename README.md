@@ -85,9 +85,10 @@ Landing                                                                       | 
 #!/bin/sh
 export PORT=3000 \
 export DEBUG="*" \
-export NODE_ENV="production" \
+export NODE_ENV="development" \
 export APPSECRET="somecrazyhash" \
 export CLIENT_API_PATH="/api" \
+export CLIENT_DOMAIN="localhost" \
 export CLIENT_API_DOMAIN="localhost" \
 export SESSION_KEY="express.sid" \
 export MONGO_URL="mongodb://localhost/hearsay" \
