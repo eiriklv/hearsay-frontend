@@ -48,6 +48,10 @@ var categoryTree = [
             {
                 display: 'Entrepreneur.com',
                 value: 'entrepreneur'
+            },
+            {
+                display: 'KQED MindShift',
+                value: 'mindshift'
             }
         ]
     },
