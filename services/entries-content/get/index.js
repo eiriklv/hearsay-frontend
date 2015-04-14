@@ -19,7 +19,7 @@ exports = module.exports = function (Entry, helpers) {
 
             var options = { sort: 'ranking', limit: perPage, skip: page * perPage };
 
-            Entry.find(query, fields, options, function (err, entries) {
+            Entry.find(query, '', options, function (err, entries) {
                 if (err) return callback(err);
                 entries = entries || [];
                 callback(err, entries);
