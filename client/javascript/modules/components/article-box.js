@@ -13,6 +13,7 @@ var helpers = require('../../../../helpers/common')();
 var InfiniteScroll = require('react-infinite-scroll')(React);
 var MasonryMixin = require('react-masonry-mixin');
 var PackeryMixin = require('react-packery-mixin');
+var Masonry = require('react-masonry-component')(React);
 
 // options
 var masonryOptions = {};
@@ -23,7 +24,7 @@ var Article = require('./article');
 module.exports = React.createClass({
     displayName: 'ArticleBox',
 
-    mixins: [ReactAsync.Mixin, PackeryMixin('masonryContainer', masonryOptions)],
+    mixins: [ReactAsync.Mixin, MasonryMixin('masonryContainer', masonryOptions)],
 
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.category !== this.props.category) {
@@ -92,7 +93,22 @@ module.exports = React.createClass({
             <div className='container'>
                 <div className='row'>
                     <div>
-                        <InfiniteScroll ref='masonryContainer' pageStart={this.state.page - 1} loader={this.getLoaderElement()} loadMore={this.loadMoreArticles} hasMore={this.state.hasMore} threshold={1000}>
+                        <InfiniteScroll 
+                            ref='masonryContainer'
+                            pageStart={this.state.page - 1}
+                            loader={this.getLoaderElement()}
+                            loadMore={this.loadMoreArticles}
+                            hasMore={this.state.hasMore}
+                            threshold={1000}
+                        >
+                            {/* 
+                            <Masonry
+                                elementType={'div'}
+                                options={masonryOptions}
+                            >
+                                {this.getArticlesToRender()}
+                            </Masonry>
+                            */}
                             {this.getArticlesToRender()}
                         </InfiniteScroll>
                     </div>
