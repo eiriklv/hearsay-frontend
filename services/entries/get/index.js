@@ -17,7 +17,7 @@ exports = module.exports = function (Entry, helpers) {
                 {category: body.category} :
                 {};
 
-            var options = { sort: 'ranking', limit: perPage, skip: page * perPage };
+            var options = { sort: 'ranking', limit: +perPage, skip: +page * +perPage };
             var fields = '-content.body';
 
             Entry.find(query, fields, options, function (err, entries) {
