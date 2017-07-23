@@ -3,7 +3,6 @@
 'use strict';
 
 var React = require('react');
-var ReactAsync = require('react-async');
 
 module.exports = React.createClass({
     displayName: 'Header',

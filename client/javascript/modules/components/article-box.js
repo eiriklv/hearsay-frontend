@@ -4,7 +4,6 @@
 
 var React = require('react');
 var ReactAsync = require('react-async');
-var superagent = require('superagent');
 
 // helpers
 var helpers = require('../../../../helpers/common')();
@@ -12,8 +11,6 @@ var helpers = require('../../../../helpers/common')();
 // addons
 var InfiniteScroll = require('react-infinite-scroll')(React);
 var MasonryMixin = require('react-masonry-mixin');
-var PackeryMixin = require('react-packery-mixin');
-var Masonry = require('react-masonry-component')(React);
 
 // options
 var masonryOptions = {};
@@ -93,7 +90,7 @@ module.exports = React.createClass({
             <div className='container'>
                 <div className='row'>
                     <div>
-                        <InfiniteScroll 
+                        <InfiniteScroll
                             ref='masonryContainer'
                             pageStart={this.state.page - 1}
                             loader={this.getLoaderElement()}
@@ -101,7 +98,7 @@ module.exports = React.createClass({
                             hasMore={this.state.hasMore}
                             threshold={1000}
                         >
-                            {/* 
+                            {/*
                             <Masonry
                                 elementType={'div'}
                                 options={masonryOptions}

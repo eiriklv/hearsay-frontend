@@ -10,7 +10,6 @@ var api = require('./modules/api')(config);
 // dependencies
 var React = require('react');
 var ReactAsync = require('react-async');
-var superagent = require('superagent');
 
 // custom components
 var ArticleBox = require('./modules/components/article-box');
